@@ -1,5 +1,9 @@
 @extends('welcome')
 @section('content')
+<example-component></example-component> 
+{{-- <create-resource-component></create-resource-component> --}}
+{{-- <calling-component></ --}}
+{{-- 
 <div class="container">
     <div class="row py-3">
       <div class="col-12 col-md-4">
@@ -56,11 +60,11 @@
         <button id="startCall" class="btn btn-primary px-5 mt-4" onClick="makeCall()" disabled="true">Call</button>
         <button id="hangupCall" class="btn btn-danger px-5 mt-4 d-none" onClick="hangup()" disabled="true">Hang up</button>
       </div>
-    </div>
+    </div> --}}
 @endsection
 
 @push('scripts')
-    
+{{--     
   <script type="text/javascript">
     var client;
     var currentCall = null;
@@ -234,5 +238,5 @@
         });
       }
     }
-  </script>
+  </script> --}}
 @endpush

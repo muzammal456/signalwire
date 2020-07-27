@@ -28,4 +28,6 @@ class HomeController extends Controller
     public function video(){
         return view('video');
     }
+    
+    
 }
