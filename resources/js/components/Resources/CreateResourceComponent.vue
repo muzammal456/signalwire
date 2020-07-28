@@ -15,7 +15,10 @@
               </div>
             </div>
           </div>
+          
+        <a href="/message">Go To Send SMS</a>
         </div>
+        
     </div> 
 
     <calling_component :project_credientials="project_credientials"></calling_component>
@@ -32,8 +35,8 @@
             return {
                 name: '',
                 project_credientials: {
-                    jwt_token: 'd96c3f14-c40f-4b4b-bf26-056bcf976d22',
-                    project_id: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE1OTU4NDY0OTYsImlzcyI6IlNpZ25hbFdpcmUgSldUIiwianRpIjoiWklhd09HSDg2UXlBZURDSFh2enZvUXZSdlNVIiwic2NvcGUiOiJ3ZWJydGMiLCJzdWIiOiJkOTZjM2YxNC1jNDBmLTRiNGItYmYyNi0wNTZiY2Y5NzZkMjIiLCJyZXNvdXJjZSI6Ijk1NTIzMzVkLWZhNmEtNDYzYi1iZGNiLWZlZGNjYWVhMGQyMyIsImV4cCI6MTU5NTg0NzM5Nn0.kcglF7uWsUs32xw7dw0gpv7nwyd828w078IJYyrYRVTCzoYGrQ7fMazyeJADqmy9CsrxxfD4JjQF-2j9tJn9NQ' 
+                    jwt_token: '',
+                    project_id: '' 
                 }
             }
         },

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use SignalWire\Rest\Client;
 class SignalWireController extends Controller
 {
     public function createResource(Request $request){
@@ -33,5 +33,22 @@ class SignalWireController extends Controller
         $data['jwt_token'] = $result->jwt_token;
         $data['project_id'] = $project_id;
         return $data;
+    }
+    public function message(){
+        return view('message');
+    }
+    public function sendMessage(Request $request){
+    
+        $project_id     = config('signal_wire_api.signal_wire.project_id');
+        $token          = config('signal_wire_api.signal_wire.token');
+        $space_url      = config('signal_wire_api.signal_wire.space_url'); 
+        $client         = new Client($project_id, $token, array("signalwireSpaceUrl" => $space_url));
+        $from             = '+16623628302';
+        $message        = $client->messages
+                            ->create("+".$request->to, // to
+                                    array("from" => $from, "body" => $request->body)
+                            );
+
+       return $message;
     }
 }

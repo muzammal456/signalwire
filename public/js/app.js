@@ -49651,7 +49651,8 @@ module.exports = function(module) {
 var map = {
 	"./components/CallingComponent": [
 		"./resources/js/components/CallingComponent.vue",
-		0
+		0,
+		2
 	]
 };
 function webpackAsyncContext(req) {
@@ -49664,7 +49665,7 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[1]).then(function() {
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
 		return __webpack_require__(id);
 	});
 }
@@ -49687,7 +49688,8 @@ var map = {
 	"./components/Resources/CreateResourceComponent": [
 		"./resources/js/components/Resources/CreateResourceComponent.vue",
 		0,
-		2
+		2,
+		3
 	]
 };
 function webpackAsyncContext(req) {
@@ -49743,6 +49745,41 @@ webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
 webpackAsyncContext.id = "./resources/js lazy recursive ^.*ExampleComponent$";
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ "./resources/js lazy recursive ^.*MessageComponent$":
+/*!*****************************************************************!*\
+  !*** ./resources/js lazy ^.*MessageComponent$ namespace object ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./components/MessageComponent": [
+		"./resources/js/components/MessageComponent.vue",
+		4
+	]
+};
+function webpackAsyncContext(req) {
+	if(!__webpack_require__.o(map, req)) {
+		return Promise.resolve().then(function() {
+			var e = new Error("Cannot find module '" + req + "'");
+			e.code = 'MODULE_NOT_FOUND';
+			throw e;
+		});
+	}
+
+	var ids = map[req], id = ids[0];
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(id);
+	});
+}
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = "./resources/js lazy recursive ^.*MessageComponent$";
 module.exports = webpackAsyncContext;
 
 /***/ }),
@@ -49871,6 +49908,9 @@ Vue.component("example-component", function () {
 });
 Vue.component("calling-component", function () {
   return __webpack_require__("./resources/js lazy recursive ^.*CallingComponent$")(Components + "CallingComponent");
+});
+Vue.component("message-component", function () {
+  return __webpack_require__("./resources/js lazy recursive ^.*MessageComponent$")(Components + "MessageComponent");
 }); // ==================== RESOURCE COMPONENTS ============================
 
 Vue.component('create-resource-component', function () {

@@ -8,6 +8,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <script src="https://cdn.signalwire.com/libs/js/relay/1.2.3/relay.min.js"></script>
 {{-- 
         <!-- Cross Browser WebRTC Adapter -->
         <script type="text/javascript" src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
@@ -18,7 +19,7 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
         <link rel="shortcut icon" href="https://signalwire.com/assets/images/favicon.ico" /> --}}
-        <script src="https://cdn.signalwire.com/libs/js/relay/1.2.3/relay.min.js"></script>
+        {{-- <script src="https://cdn.signalwire.com/libs/js/relay/1.2.3/relay.min.js"></script> --}}
     </head>
     <body>
         <div id="app">
